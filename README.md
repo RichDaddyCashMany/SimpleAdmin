@@ -1,4 +1,77 @@
-# SimpleAdmin
-a simple admin web application created with vue, vue-router, node, webpack
+### 介绍
+`前后端分离`后台小网站
+>- 前端使用vue+vue-router+element-ui+npm+webpack
+>- 后台接口使用php
 
-用thinkphp写过网站的应该知道，网站的前端展示和后台数据都由它来完成，由于框架功能太多（包括不该有的），以至于让人觉得这个框架在模块化、解耦等方面做的不太好。这个小项目是用前后台分离的方式去开发的。项目使用vue-cli构建，已默认配置好webpack，主要使用vue开发页面，vue-router建立路由，像app开发一样通过接口的方式获取json数据并展示。
+![预览](http://img2.ph.126.net/IQs28wtCmb3iVjjAI416cQ==/6632691744373838870.gif)
+
+### 演示地址
+
+<http://www.signxx.com>
+
+### 安装
+
+```
+git clone https://github.com/HJaycee/SimpleAdmin.git
+cd SimpleAdmin
+npm install
+```
+
+### 启动
+
+```
+npm run dev
+```
+
+### 部署到服务器
+
+```
+cd SimpleAdmin
+npm run build
+// 编译完成后，将dist目录下的文件上传到服务器目录下
+```
+
+```
+// 因为使用vue-router的hitory模式，服务器需要做相关配置自动重定向到index.html
+// apache下创建隐藏文件.htaccess，填以下内容
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+```
+
+
+
+### 前端部分
+
+已实现功能
+>- 登录/注册
+>- 留言
+>- 留言列表
+>- 身份过期处理
+
+相关配置
+
+```
+/config/index.js // 反向代理
+/src/router/index.js // 路由
+/url/api.js // 请求接口
+```
+
+### 后台部分
+
+>- 环境要求php5
+>- 使用ThinkPHP3.2.3
+>- 提供前端需要的相关接口：登录接口返回token，其它接口效验token是否过期
+
+### 数据库
+
+```
+user // 用户表
+feedback // 留言表
+```
+
