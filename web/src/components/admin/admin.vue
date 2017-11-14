@@ -64,6 +64,11 @@
       }
     },
     created: function () {
+      if (localStorage.token) {
+        this.$router.push({name: 'feedback'})
+      } else {
+        this.$router.push({name: 'login'})
+      }
     },
     beforeRouteEnter: (to, from, next) => {
       // console.log('new: %s, old: %s', JSON.stringify(to), JSON.stringify(from))

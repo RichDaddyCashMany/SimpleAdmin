@@ -6,7 +6,6 @@ import feedback from '@/components/admin/feedback'
 import feedbacklist from '@/components/admin/feedbacklist'
 import reg from '@/components/common/reg'
 import login from '@/components/common/login'
-
 Vue.use(Router)
 
 export default new Router({
@@ -45,9 +44,9 @@ export default new Router({
     },
     {
       path: '/',
-      title: '登录',
-      component: login,
-      name: 'login'
+      title: '管理台',
+      component: admin,
+      name: 'admin'
     },
     {
       path: '/404',

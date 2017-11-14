@@ -1,5 +1,6 @@
 import axios from 'axios'
 import md5 from 'js-md5'
+import router from '../router'
 
 const request = (url, data, callback) => {
   axios.post('/interface/' + url, data)
@@ -8,6 +9,9 @@ const request = (url, data, callback) => {
       response.status === 200 &&
       response.data.code === 1000) {
       // need login
+      router.push({
+        name: 'login'
+      })
     }
     callback(response)
   })

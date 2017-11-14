@@ -54,7 +54,8 @@
                 }
                 callback()
               },
-              trigger: 'blur'
+              trigger: 'blur',
+              required: true
             }
           ],
           password: [
@@ -67,7 +68,8 @@
                 }
                 callback()
               },
-              trigger: 'blur'
+              trigger: 'blur',
+              required: true
             }
           ],
           password2: [
@@ -82,7 +84,8 @@
                 }
                 callback()
               },
-              trigger: 'blur'
+              trigger: 'blur',
+              required: true
             }
           ]
         }
