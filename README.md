@@ -5,10 +5,6 @@
 
 ![预览](http://img2.ph.126.net/IQs28wtCmb3iVjjAI416cQ==/6632691744373838870.gif)
 
-### 演示地址
-
-<http://www.signxx.com>
-
 ### 安装
 
 ```
