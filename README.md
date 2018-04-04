@@ -1,3 +1,9 @@
+###
+更稳定的vue管理台请移步：
+* [管理台前端部分](https://github.com/HJaycee/app_admin)
+* [管理台后台部分](https://github.com/HJaycee/app_admin_api)
+
+
 ### 介绍
 `前后端分离`后台小网站
 >- 前端使用vue+vue-router+element-ui+npm+webpack
